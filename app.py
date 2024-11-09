@@ -7,7 +7,7 @@ app.secret_key = 'temporary_key'
 
 def get_db_connection():
     return mysql.connector.connect(
-        host='clonedb.c9426io2qnef.us-east-1.rds.amazonaws.com',
+        host='clonedb.cp4g68msmepl.us-east-1.rds.amazonaws.com',
         user='admin',
         password='gokulakrishnan30505',
         database='clone_db'
@@ -55,8 +55,8 @@ def login():
 @app.route('/dashboard')
 def dashboard():
     course_urls = [
-        'https://clonebucket123.s3.us-east-1.amazonaws.com/python_code.pdf',
-        'https://clonebucket123.s3.us-east-1.amazonaws.com/PYTHON%2BPROGRAMMING%2BNOTES.pdf'
+        'https://clonebucker6.s3.us-east-1.amazonaws.com/python_code.pdf',
+        'https://clonebucker6.s3.us-east-1.amazonaws.com/PYTHON%2BPROGRAMMING%2BNOTES.pdf'
     ]
     
     return render_template('dashboard.html', course_urls=course_urls)
