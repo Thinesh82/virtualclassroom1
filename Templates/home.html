@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Classroom</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style1.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="/static/img/icon.png">
+</head>
+<body>
+    <!-- Header -->
+    <header id="home">
+        <nav class="ni">
+            <div class="logo">AWS Virtual Classroom</div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#courses">Courses</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="{{ url_for('login')}}">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section  class="hero">
+        <div class="hero-content">
+            <h1>Welcome to AWS Virtual Classroom</h1>
+            <p>Your gateway to learning with the latest technology</p>
+            <a href="{{ url_for('register') }}" class="btn-primary">Register Now</a>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="about">
+        <div class="about-content">
+            <h2>About Us</h2>
+            <p>We provide a virtual classroom experience hosted on AWS, offering a wide range of courses in cloud computing, AI, and modern technologies. Learn from experts in the industry, and download learning materials straight from the cloud.</p>
+        </div>
+        <div class="about-image">
+            <img src="{{ url_for('static', filename='img/bg2.png') }}" alt="About Us">
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="courses" class="courses">
+        <h2>Our Courses</h2>
+        <p>Explore our available courses in cutting-edge technology fields such as:</p>
+        <div class="course-cards">
+            <div class="course-card">
+                <h3>Cloud Computing</h3>
+                <p>Learn how to leverage AWS for cloud-based applications.</p>
+            </div>
+            <div class="course-card">
+                <h3>Artificial Intelligence</h3>
+                <p>Dive deep into AI and machine learning technologies.</p>
+            </div>
+            <div class="course-card">
+                <h3>Python Programming</h3>
+                <p>Master Python for automation, data science, and development.</p>
+            </div>
+        </div>
+        <a href="{{ url_for('register') }}" class="btn-secondary">Join and Access All Courses</a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="section-p1">
+        <div class="col">
+            
+            <h4>Contact</h4>
+            <p><strong>Address:</strong> 8/1A Athreyapuram Main Road, Chooleimedu, Chennai</p>
+            <p><strong>Phone:</strong> +91 94444 84888 / +91 98400 21583</p>
+            <p><strong>Hours:</strong> 9.00 AM to 3.00 PM</p>
+            <div class="follow">
+                <h4>Follow Us</h4>
+                <div class="icon">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-pinterest-p"></i>
+                    <i class="fab fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <h4>About</h4>
+            <a href="#about">About Us</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Condition</a>
+            <a href="#">Contact Us</a>
+        </div>
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="{{ url_for('login')}}">Sign in</a>
+            <a href="#">My Wishlist</a>
+            <a href="#">Help</a>
+        </div>
+        <div class="col install">
+            <h4>Install App</h4>
+            <p>From App Store or Google Play</p>
+            <div class="row">
+                <img width="130px" style="margin-bottom: 8px;" src="/static/img/apple.jpg" alt="">
+                <img width="157px" src="/static/img/google.jpg" alt="">
+            </div>
+            <p class="sec">Secure Payment GateWays</p>
+            <img width="250px" src="/static/img/gatway.jpg" alt="" class="gat">
+        </div>
+        <div class="copyright">
+            <p>© 2024, Daniel - Home Page all rights reserved</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Classroom</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='dashboard.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="/static/img/icon.png">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Your Dashboard</h1>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('home') }}" class="gre">Home</a></li>
+                <li><a href="{{ url_for('logout') }}">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <h2>Your Course Materials</h2>
+        <div class="course-container">
+            {% for url in course_urls %}
+            <div class="course-card">
+                <h3>Python Course Material</h3>
+                <p>Click the button below to download your PDF.</p>
+                <a href="{{ url }}" class="download-button">Download</a>
+            </div>
+            {% endfor %}
+        </div>
+    </main>
+    
+        <!-- Footer -->
+        <footer class="section-p1">
+            <div class="col">
+                <img class="logo" width="100px" style="border-radius: 100px;" src="img/logo.png" alt="">
+                <h4>Contact</h4>
+                <p><strong>Address:</strong> 8/1A Athreyapuram Main Road, Chooleimedu, Chennai</p>
+                <p><strong>Phone:</strong> +91 94444 84888 / +91 98400 21583</p>
+                <p><strong>Hours:</strong> 9.00 AM to 3.00 PM</p>
+                <div class="follow">
+                    <h4>Follow Us</h4>
+                    <div class="icon">
+                        <i class="fab fa-facebook-f"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-pinterest-p"></i>
+                        <i class="fab fa-youtube"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <h4>About</h4>
+                <a href="#about">About Us</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms & Condition</a>
+                <a href="#">Contact Us</a>
+            </div>
+            <div class="col">
+                <h4>My Account</h4>
+                <a href="{{ url_for('login')}}">Sign in</a>
+                <a href="#">My Wishlist</a>
+                <a href="#">Help</a>
+            </div>
+            <div class="col install">
+                <h4>Install App</h4>
+                <p>From App Store or Google Play</p>
+                <div class="row">
+                    <img width="130px" style="margin-bottom: 8px;" src="/static/img/apple.jpg" alt="">
+                    <img width="157px" src="/static/img/google.jpg" alt="">
+                </div>
+                <p class="sec">Secure Payment GateWays</p>
+                <img width="250px" src="/static/img/gatway.jpg" alt="" class="gat">
+            </div>
+            <div class="copyright">
+                <p>© 2024, Daniel - Dashboard all rights reserved</p>
+            </div>
+        </footer>
+</body>
+</html>

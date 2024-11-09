@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+main{
+    height: 70vh;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background:url(/static/img/back1.png);
+    background-position: center;
+    background-size: cover;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.7s;
+    padding: 5px 10px 5px 10px;
+    border-radius: 20px;
+}
+nav a:hover{
+    background-color: red;
+    color: black;
+}
+.gre{
+    background-color: transparent;
+}
+.gre:hover{
+    background-color: #28a745;
+}
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+.course-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.course-card {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 300px;
+    margin: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.course-card:hover {
+    transform: scale(1.05);
+}
+
+.download-button {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #28a745;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    margin-top: 15px;
+}
+
+.download-button:hover {
+    background-color: #218838;
+}
+
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 50px 50px 25px 50px;
+    justify-content: space-between;
+    background:url(/static/img/back1.png);
+    background-size: cover;
+    background-position: top;
+}
+    footer .col{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 20px;
+    }
+    footer .logo{
+        margin-bottom: 20px;
+    }
+    footer h4{
+        font-size: 14px;
+        color: white;
+        margin-bottom: 20px;
+    }
+    footer p{
+        font-size: 13px;
+        color: white;
+        margin: 0 0 8px 0;
+    }
+    footer a{
+        font-size: 13px;
+        text-decoration: none;
+        color: white;
+        margin-bottom: 10px;
+        transition: 0.9s;
+    }
+    footer .follow{
+        margin-top: 20px;
+        
+    }
+    footer .follow i{
+        color: #465b52;
+        padding-right: 4px;
+        cursor: pointer;
+        transition: 0.7s;
+    }
+    .icon{
+        margin-bottom: 50px;
+    }
+    footer .install .row img{
+border-radius: 6px;
+    }
+    footer .gat{
+margin-top: 10px;
+    }
+    footer .sec{
+        margin-top: 5px;
+    }
+    footer .follow i:hover,footer a:hover{
+        color: #088178;
+    }
+    footer .copyright{
+        width: 100%;
+        text-align: center;
+    }
