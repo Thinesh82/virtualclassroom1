@@ -9,7 +9,7 @@ def get_db_connection():
     return mysql.connector.connect(
         host='clonedb.cp4g68msmepl.us-east-1.rds.amazonaws.com',
         user='admin',
-        password='qwertyuiopasdfghjkl12345',
+        password='qwertyuiop12345asdfghjkl;',
         database='clone_db'
     )
 
@@ -55,8 +55,8 @@ def login():
 @app.route('/dashboard')
 def dashboard():
     course_urls = [
-        'https://clonebucker6.s3.us-east-1.amazonaws.com/python_code.pdf',
-        'https://clonebucker6.s3.us-east-1.amazonaws.com/PYTHON%2BPROGRAMMING%2BNOTES.pdf'
+        'https://clonebucker8.s3.us-east-1.amazonaws.com/python_code.pdf',
+        'https://clonebucker8.s3.us-east-1.amazonaws.com/PYTHON%2BPROGRAMMING%2BNOTES.pdf'
     ]
     
     return render_template('dashboard.html', course_urls=course_urls)
